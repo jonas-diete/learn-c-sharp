@@ -1,5 +1,5 @@
 ﻿using System;
-using System.Data;
+using System.Linq;
 
 namespace LearnCSharp
 {
@@ -101,16 +101,33 @@ namespace LearnCSharp
             }
 
             string[] countries = { "United Kingdom", "Nigeria", "Laos", "Canada", "Bolivia" };
-            foreach (string country in countries) 
+            foreach (string country in countries)
             {
                 Console.WriteLine(country);
             }
 
             // change arrays
-            int[] lovelyNumbers = { 1, 2, 4, 5, 7, 11, 13, 17, 19, 23, 29 };
-            Console.WriteLine(lovelyNumbers[2]); 
-            lovelyNumbers[2] = 3;
-            Console.WriteLine(lovelyNumbers[2]);
+            int[] lovelyNumbers = { 23, 13, 5, 12, 7 };
+
+            Console.WriteLine(lovelyNumbers[3]);
+            lovelyNumbers[3] = 3;
+            Console.WriteLine(lovelyNumbers[3]);
+
+            Array.Sort(lovelyNumbers);
+            foreach (int number in lovelyNumbers)
+            {
+                Console.WriteLine(number);
+            }
+
+            // these functions use System.Linq
+            Console.WriteLine("Largest lovely number: " + lovelyNumbers.Max());
+            Console.WriteLine("Smallest lovely number: " + lovelyNumbers.Min());
+            Console.WriteLine("Sum of lovely numbers: " + lovelyNumbers.Sum());
+
+            // 2D arrays - declare with comma!
+            int[,] my2DArray = { { 2, 4, 6 }, { 3, 4, 10 } };
+            Console.WriteLine("second array, third element: " + my2DArray[1, 2]);
+            Console.WriteLine("first array, third element: " + my2DArray[0, 2]);
         }
     }
 }
