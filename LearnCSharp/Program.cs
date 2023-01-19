@@ -66,21 +66,28 @@ namespace LearnCSharp
 
             Console.WriteLine("Write the time in hours (24 hours max).");
             int time = Convert.ToInt32(Console.ReadLine());
-            if (time > 5 && time < 12)
+            if (time > 5)
             {
-                Console.WriteLine("It's the morning!");
-            }
-            else if (time < 14)
-            {
-                Console.WriteLine("It's lunchtime!");
-            }
-            else if (time < 18)
-            {
-                Console.WriteLine("It's the afternoon.");
-            }
-            else if (time < 22)
-            {
-                Console.WriteLine("It's the evening.");
+                if (time < 12)
+                {
+                    Console.WriteLine("It's the morning!");
+                }
+                else if (time < 14)
+                {
+                    Console.WriteLine("It's lunchtime!");
+                }
+                else if (time < 18)
+                {
+                    Console.WriteLine("It's the afternoon.");
+                }
+                else if (time < 23)
+                {
+                    Console.WriteLine("It's the evening.");
+                }
+                else
+                {
+                    Console.WriteLine("It's nighttime");
+                }
             }
             else
             {
@@ -98,6 +105,12 @@ namespace LearnCSharp
             {
                 Console.WriteLine(country);
             }
+
+            // change arrays
+            int[] lovelyNumbers = { 1, 2, 4, 5, 7, 11, 13, 17, 19, 23, 29 };
+            Console.WriteLine(lovelyNumbers[2]); 
+            lovelyNumbers[2] = 3;
+            Console.WriteLine(lovelyNumbers[2]);
         }
     }
 }
