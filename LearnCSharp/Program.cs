@@ -26,6 +26,12 @@ namespace LearnCSharp
             Console.WriteLine("Please enter your height in cm: ");
             int heightInCm = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Your height is " + heightInCm + "cm.");
+            heightInCm++;
+            Console.WriteLine("It appears you have grown by 1cm. Your new height is " + heightInCm + "cm.");
+            int largestHeight = Math.Max(141, 125);
+            Console.WriteLine(largestHeight + "cm is the largest height.");
+            int shortestHeight = Math.Min(141, 125);
+            Console.WriteLine(shortestHeight + "cm is the shortest height.");
         }
     }
 }
