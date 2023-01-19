@@ -170,9 +170,28 @@ namespace LearnCSharp
             Console.WriteLine("first array, third element: " + my2DArray[0, 2]);
         }
 
+        static string CreateIntroduction(string name, int age)
+        {
+            return $"Hello, my name is {name} and I am {age} years old.";
+        }
+
+        static int SumFromOneUntil(int lastNumber)
+        {
+            int result = 0;
+            for (int i = 0; i <= lastNumber; i++)
+            {
+                result += i;
+            }
+            return result;
+        }
+
         static void Main(string[] args)
         {
-            Learning2DArrays();
+            Console.WriteLine(CreateIntroduction("Timothy", 23));
+            Console.WriteLine(CreateIntroduction("Barbara", 57));
+            Console.WriteLine(CreateIntroduction("Richard", 74));
+
+            Console.WriteLine(SumFromOneUntil(100));
         }
     }
 }
