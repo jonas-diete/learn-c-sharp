@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data;
 
 namespace LearnCSharp
 {
@@ -23,6 +24,8 @@ namespace LearnCSharp
             Console.WriteLine(x + y + z);
 
             // arithmetic and logical operators are the same as in JavaScript, which I know already.
+            // + - * / %
+            // || && !
 
             // user input
             Console.WriteLine("Please enter your height in cm: ");
@@ -41,8 +44,18 @@ namespace LearnCSharp
             Console.Write("Write a greeting: ");
             string greeting = Console.ReadLine();
             Console.WriteLine("Your greeting is " + greeting.Length + " characters long.");
-            Console.WriteLine("Uppercase: " + greeting.ToUpper());
-            Console.WriteLine("Lowercase: " + greeting.ToLower());
+            Console.WriteLine($"Uppercase: {greeting.ToUpper()} - amazing isn't it?");
+            Console.WriteLine($"Lowercase: {greeting.ToLower()} - and all small!");
+
+            string name = "James Bond";
+            int firstLetterSurnameCharPosition = name.IndexOf("B");
+            // Substring creates a new string starting at that index position
+            string lastName = name.Substring(firstLetterSurnameCharPosition);
+            Console.WriteLine(lastName);
+
+            // escaping
+            string statement = "Most \"Cavemen\" didn't actually live in caves";
+            Console.WriteLine(statement);
         }
     }
 }
