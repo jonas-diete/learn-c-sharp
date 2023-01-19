@@ -86,6 +86,18 @@ namespace LearnCSharp
             {
                 Console.WriteLine("It's nighttime.");
             }
+
+            // loops
+            for (int i = 0; i < 21; i += 2)
+            {
+                Console.WriteLine(i);
+            }
+
+            string[] countries = { "United Kingdom", "Nigeria", "Laos", "Canada", "Bolivia" };
+            foreach (string country in countries) 
+            {
+                Console.WriteLine(country);
+            }
         }
     }
 }
