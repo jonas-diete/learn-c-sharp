@@ -1,19 +1,23 @@
 ﻿using System;
 using System.Linq;
+using System.Threading;
 
 namespace LearnCSharp
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static void VariableLearning()
         {
-            // testing variables
+            // Learning about Variables
             Console.WriteLine("Hello and welcome!");
             int age = 21;
             const string monthOfBirth = "October";
             Console.WriteLine("You are " + age + " years old.");
             Console.WriteLine("You were born in " + monthOfBirth + ".");
+        }
 
+        static void MathsLearning()
+        {
             // Testing some maths
             Console.WriteLine("5 / 2 = " + 5 / 2);
             Console.WriteLine("5.0 / 2 = " + 5.0D / 2);
@@ -26,44 +30,62 @@ namespace LearnCSharp
             // arithmetic and logical operators are the same as in JavaScript, which I know already.
             // + - * / %
             // || && !
+        }
 
-            // user input
+        static void UserInputLearning()
+        {
+            // learning to take user input
             Console.WriteLine("Please enter your height in cm: ");
             int heightInCm = Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Your height is " + heightInCm + "cm.");
             heightInCm++;
             Console.WriteLine("It appears you have grown by 1cm. Your new height is " + heightInCm + "cm.");
+        }
 
-            // math functions
+        static void MathsFunctionsLearning()
+        {
+            // Learning about Maths Functions
             int largestHeight = Math.Max(141, 125);
             Console.WriteLine(largestHeight + "cm is the largest height.");
             int shortestHeight = Math.Min(141, 125);
             Console.WriteLine(shortestHeight + "cm is the shortest height.");
+        }
 
-            // string functions
+        static void StringFunctionsLearning()
+        {
+            // Learning about string functions
             Console.Write("Write a greeting: ");
             string greeting = Console.ReadLine();
             Console.WriteLine("Your greeting is " + greeting.Length + " characters long.");
             Console.WriteLine($"Uppercase: {greeting.ToUpper()} - amazing isn't it?");
             Console.WriteLine($"Lowercase: {greeting.ToLower()} - and all small!");
-
             string name = "James Bond";
             int firstLetterSurnameCharPosition = name.IndexOf("B");
+            
             // Substring creates a new string starting at that index position
             string lastName = name.Substring(firstLetterSurnameCharPosition);
             Console.WriteLine(lastName);
 
             // escaping - works for \ ' "
             string statement = "Most \"Cavemen\" didn't actually live in caves";
-            Console.WriteLine(statement);
+            Console.WriteLine(statement);        
+        }
 
-            // if statements
-            bool light = true;
+        static void IsItLight(bool light)
+        {
+            // practising bool and if statements
             if (light)
             {
                 Console.WriteLine("It's light!");
             }
+            else
+            {
+                Console.WriteLine("It's dark!");
+            }
+        }
 
+        static void TimeOfDay()
+        {
             Console.WriteLine("Write the time in hours (24 hours max).");
             int time = Convert.ToInt32(Console.ReadLine());
             if (time > 5)
@@ -93,41 +115,64 @@ namespace LearnCSharp
             {
                 Console.WriteLine("It's nighttime.");
             }
+        }
 
-            // loops
+        static void ForLoopLearning()
+        {
             for (int i = 0; i < 21; i += 2)
             {
                 Console.WriteLine(i);
             }
+        }
 
+        static void DisplayCountries()
+        {
+            // practising foreach loop
             string[] countries = { "United Kingdom", "Nigeria", "Laos", "Canada", "Bolivia" };
             foreach (string country in countries)
             {
                 Console.WriteLine(country);
             }
+        }
 
-            // change arrays
+        static void ChangingArrays()
+        {
+            // practising how to change arrays
             int[] lovelyNumbers = { 23, 13, 5, 12, 7 };
 
-            Console.WriteLine(lovelyNumbers[3]);
+            Console.WriteLine("Third index of array: " + lovelyNumbers[3]);
+            Console.WriteLine("Changing third index...");
             lovelyNumbers[3] = 3;
-            Console.WriteLine(lovelyNumbers[3]);
+            Console.WriteLine("Third index of array: " + lovelyNumbers[3]);
 
+            Console.WriteLine("Sorting array...");
             Array.Sort(lovelyNumbers);
             foreach (int number in lovelyNumbers)
             {
                 Console.WriteLine(number);
             }
+        }
 
+        static void ArrayFunctions()
+        {
+            int[] lovelyNumbers = { 23, 13, 5, 12, 7 };
             // these functions use System.Linq
             Console.WriteLine("Largest lovely number: " + lovelyNumbers.Max());
             Console.WriteLine("Smallest lovely number: " + lovelyNumbers.Min());
             Console.WriteLine("Sum of lovely numbers: " + lovelyNumbers.Sum());
+        }
 
+        static void Learning2DArrays()
+        {
             // 2D arrays - declare with comma!
             int[,] my2DArray = { { 2, 4, 6 }, { 3, 4, 10 } };
             Console.WriteLine("second array, third element: " + my2DArray[1, 2]);
             Console.WriteLine("first array, third element: " + my2DArray[0, 2]);
+        }
+
+        static void Main(string[] args)
+        {
+            Learning2DArrays();
         }
     }
 }
