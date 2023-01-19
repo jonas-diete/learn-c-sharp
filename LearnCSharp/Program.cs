@@ -53,9 +53,39 @@ namespace LearnCSharp
             string lastName = name.Substring(firstLetterSurnameCharPosition);
             Console.WriteLine(lastName);
 
-            // escaping
+            // escaping - works for \ ' "
             string statement = "Most \"Cavemen\" didn't actually live in caves";
             Console.WriteLine(statement);
+
+            // if statements
+            bool light = true;
+            if (light)
+            {
+                Console.WriteLine("It's light!");
+            }
+
+            Console.WriteLine("Write the time in hours (24 hours max).");
+            int time = Convert.ToInt32(Console.ReadLine());
+            if (time > 5 && time < 12)
+            {
+                Console.WriteLine("It's the morning!");
+            }
+            else if (time < 14)
+            {
+                Console.WriteLine("It's lunchtime!");
+            }
+            else if (time < 18)
+            {
+                Console.WriteLine("It's the afternoon.");
+            }
+            else if (time < 22)
+            {
+                Console.WriteLine("It's the evening.");
+            }
+            else
+            {
+                Console.WriteLine("It's nighttime.");
+            }
         }
     }
 }
