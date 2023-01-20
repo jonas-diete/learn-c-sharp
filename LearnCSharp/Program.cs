@@ -192,10 +192,11 @@ namespace LearnCSharp
 
             Console.WriteLine(SumFromOneUntil(100));
 
-            Animal animal = new Animal();
-            Console.WriteLine(animal.name);
-            Console.WriteLine(animal.numberOfLegs);
+            // learning about classes
+            Animal animal = new Animal("cow", 4);
             animal.Introduce();
+            Animal animal2 = new Animal("duck", 2);
+            animal2.Introduce();
         }
     }
 }

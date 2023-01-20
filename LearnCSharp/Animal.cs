@@ -8,9 +8,18 @@ namespace LearnCSharp
 {
     internal class Animal
     {
-        public string name = "cow";
-        public int numberOfLegs = 4;
+        // defining the variables
+        public string name;
+        public int numberOfLegs;
 
+        // this is the constructor
+        public Animal(string animalName, int animalNumberOfLegs)
+        {
+            name = animalName;
+            numberOfLegs = animalNumberOfLegs;
+        }
+
+        // this is another method
         public void Introduce()
         {
             Console.WriteLine($"I am a {name} and I have {numberOfLegs} legs.");
