@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using System.Threading;
 
 namespace LearnCSharp
 {
@@ -192,6 +191,10 @@ namespace LearnCSharp
             Console.WriteLine(CreateIntroduction("Richard", 74));
 
             Console.WriteLine(SumFromOneUntil(100));
+
+            Animal animal = new Animal();
+            Console.WriteLine(animal.name);
+            Console.WriteLine(animal.numberOfLegs);
         }
     }
 }
