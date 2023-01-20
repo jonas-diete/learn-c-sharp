@@ -195,6 +195,7 @@ namespace LearnCSharp
             Animal animal = new Animal();
             Console.WriteLine(animal.name);
             Console.WriteLine(animal.numberOfLegs);
+            animal.Introduce();
         }
     }
 }

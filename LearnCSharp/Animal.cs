@@ -10,5 +10,10 @@ namespace LearnCSharp
     {
         public string name = "cow";
         public int numberOfLegs = 4;
+
+        public void Introduce()
+        {
+            Console.WriteLine($"I am a {name} and I have {numberOfLegs} legs.");
+        }
     }
 }
