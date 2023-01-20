@@ -8,11 +8,12 @@ namespace LearnCSharp
 {
     internal class Animal
     {
-        // defining the variables
+        // defining the variables - name can be accessed outside of the class (public),
+        // whereas numberOfLegs just from within (private)
         public string name;
-        public int numberOfLegs;
+        private int numberOfLegs;
 
-        // this is the constructor
+        // this is the constructor - it has to be the same name as the class and return nothing
         public Animal(string animalName, int animalNumberOfLegs)
         {
             name = animalName;
